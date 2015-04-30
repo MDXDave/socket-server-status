@@ -1,6 +1,6 @@
 # Server status with socket.io
 
-[![Build status][travis-image]][travis-url] [![Test coverage][coveralls-image]][coveralls-url] [![Dependency Status][dependency-image]][dependency-url]
+[![Build status][travis-image]][travis-url] [![Dependency Status][dependency-image]][dependency-url]
 
 Check if server is online via socket.io
 
@@ -29,8 +29,6 @@ See ``examples/status.html`` for usage
 
 [travis-image]: https://img.shields.io/travis/MDXDave/socket.io-status/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/MDXDave/socket.io-status
-[coveralls-image]: https://img.shields.io/coveralls/MDXDave/socket.io-status/master.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/MDXDave/socket.io-status
 [dependency-image]: http://img.shields.io/david/MDXDave/socket.io-status.svg?style=flat-square
 [dependency-url]: https://david-dm.org/MDXDave/socket.io-status
 
