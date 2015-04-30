@@ -1,7 +1,7 @@
 /*
 
   Get server status with socket.io
-  Version 0.1
+  Version 0.2
 
   Copyright 2015 MDXDave
   https://github.com/MDXDave/socket.io-status
@@ -9,11 +9,23 @@
 */
 
 // dependencies
+var conf = require('./config.json');
 var app = require('express')();
 var http = require('http');
-var httpExpress = http.Server(app);
+var httpExpress;
+if(conf.ssl.enabled){
+  var https = require('https');
+  var fs = require('fs');
+  var options = {
+    key: fs.readFileSync(conf.ssl.key_file),
+    cert: fs.readFileSync(conf.ssl.cert_file)
+  };
+  httpExpress = https.createServer(options, app);
+}else{
+  httpExpress = http.Server(app);
+}
+
 var io = require('socket.io')(httpExpress);
-var conf = require('./config.json');
 var host, port;
 
 app.get('/', function(req, res){

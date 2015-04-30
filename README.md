@@ -18,6 +18,8 @@ and install dependencies with
 
 Open ``config.json`` and change *redirect_uri* to your domain (this redirect is used when someone access the node.js server directly), you can also change *port* to a port you would like to use.
 
+To enable ssl just change ssl *enabled* to *true* and specify the path to your keyfile and certfile.
+
 Start server with 
 
 ``node status.js``
@@ -26,6 +28,14 @@ Start server with
 
 See ``examples/status.html`` for usage
 
+##Changelog##
+**Version 0.2**
+
+- added support for SSL
+
+**Version 0.1**
+
+- initial release
 
 [travis-image]: https://img.shields.io/travis/MDXDave/socket.io-status/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/MDXDave/socket.io-status
