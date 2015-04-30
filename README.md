@@ -1,4 +1,4 @@
-# Get status of server via socket.io
+# Server status with socket.io   ![](https://travis-ci.org/MDXDave/socket.io-status.svg) ![](https://david-dm.org/MDXDave/socket.io-status.svg)
 Check if server is online via socket.io
 
 ##Installation##
