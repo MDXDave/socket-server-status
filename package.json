@@ -1,7 +1,23 @@
 {
-  "name": "socket-server-status",
-  "version": "0.1",
+  "name": "socket.io-status",
+  "version": "0.1.0",
   "description": "check server status with socket.io/node.js",
+  "author": "David Kurz <github@mdxdave.de> (https://mdxdave.de)",
+  "homepage":"https://github.com/MDXDave/socket.io-status",
+  "license": "GNU GPL",
+  "bugs": {
+    "url": "https://github.com/MDXDave/socket.io-status/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MDXDave/socket.io-status"
+  },
+  "keywords": [
+    "status",
+    "server",
+    "http",
+    "check"
+  ],
   "dependencies": {
     "express": "4.10.2",
     "socket.io": "1.2.0"

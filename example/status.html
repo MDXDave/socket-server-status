@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Get server status with socket.io</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; padding: 20px}
+      ul { padding: 40px; padding-top: 10px}
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input id="h" placeholder="Host" autocomplete="off" />
+      <input id="p" placeholder="Port" autocomplete="off" />
+      <button>Check status</button>
+    </form>
+    <ul id="messages"></ul>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script>
+      var host = window.location.hostname;
+      var port = 8080;
+      var socket = io("http://"+host+":"+port);
+      $('form').submit(function(){
+        socket.emit('getstatus', {host: $('#h').val(), port: $('#p').val()});
+        $('#h').val('');
+        $('#p').val('');
+        return false;
+      });
+      socket.on('status', function(data){
+        if(data.code == null)
+          $('#messages').append($('<li>').text(data.host+" at port "+data.port+" is "+data.status));
+        else
+          $('#messages').append($('<li>').text(data.host+" at port "+data.port+" returns code "+data.code));
+      });
+    </script>
+  </body>
+</html>
