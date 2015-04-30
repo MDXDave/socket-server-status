@@ -1,10 +1,10 @@
-# Get status of server via socket.io/node.js
-Check if server is online via socket.io and node.js
+# Get status of server via socket.io
+Check if server is online via socket.io
 
 ##Installation##
 Just clone git repository
 
-``git clone https://github.com/MDXDave/socket-server-status.git``
+``git clone https://github.com/MDXDave/socket.io-status.git``
 
 and install dependencies with
 
