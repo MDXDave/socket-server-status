@@ -51,7 +51,7 @@ io.on('connection', function(socket){
     port = data.port;
     // checking server status
     http.get({host: data.host, port: data.port}, function(res){
-        // if status code is under 400 return on else return statuscode
+        // if status code is below 400 return "online", else return "offline"
        	 if( res.statusCode < 400 )
             io.emit('status', {status:"online",host:data.host,port:data.port});
           else
