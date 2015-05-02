@@ -1,7 +1,7 @@
 {
   "name": "socket.io-status",
-  "version": "0.1.0",
-  "description": "check server status with socket.io/node.js",
+  "version": "0.2.0",
+  "description": "Check server status with socket.io",
   "author": "David Kurz <github@mdxdave.de> (https://mdxdave.de)",
   "homepage":"https://github.com/MDXDave/socket.io-status",
   "license": "GNU GPL",
